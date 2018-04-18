@@ -36,8 +36,6 @@ class App extends Component {
 
 		if(city && country){
 
-			console.log(data);
-
 			this.setState({
 			
 				temperature: data.main.temp,
@@ -68,33 +66,33 @@ class App extends Component {
 	   		});
 	   }
 	}
-  render(){
+ 	render(){
 
-    return(
+   	 return(
 
-      <div>
+      	<div>
 
-        <Titles />
+        	<Titles />
 
-        <Form getWeather={this.getWeather}/>
+        	<Form getWeather={this.getWeather}/>
 
-        <Weather 
+       		 <Weather 
         	
-        	temperature={this.state.temperature}
+        		temperature={this.state.temperature}
         	
-        	city={this.state.city}
+        		city={this.state.city}
         	
-        	country={this.state.country}
+        		country={this.state.country}
         	
-        	humidity={this.state.humidity}
+        		humidity={this.state.humidity}
         	
-        	description={this.state.description}
+        		description={this.state.description}
 
-        	error={this.state.error}/>
+        		error={this.state.error}/>
 
-      </div>
+        </div>
       );
-  }
+   }
 };
 
 export default App;
